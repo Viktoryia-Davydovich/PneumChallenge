@@ -224,7 +224,12 @@ cp_callback = tf.keras.callbacks.ModelCheckpoint(chkp_path, save_weights_only=Tr
 
 model.fit_generator(train_generator, validation_data=valid_generator, 
                     callbacks=[learn_rate_decay_callback, cp_callback],
-                    epochs=EPOCHS, steps_per_epoch=STEPS_PER_EPOCH, validation_steps = STEPS_PER_EPOCH,
+                    epochs=EPOCHS, steps_per_epoch=15, validation_steps = 15,
                     use_multiprocessing=True, workers = 4)
 
-model.load_weights('/content/md.ckpt')
+
+
+
+
+
+
